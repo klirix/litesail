@@ -1,12 +1,12 @@
 {
   "name": "litesail",
-  "version": "0.0.2",
-  "main": "bin/src/index.js",
+  "version": "0.0.3",
+  "main": "bin/index.js",
   "repository": "https://github.com/klirix/litesail",
   "description": "Lightsail CLI, but user friendly",
   "author": "Askhat Saiapov",
   "bin": {
-    "litesail": "./bin/src/index.js"
+    "litesail": "./bin/index.js"
   },
   "license": "MIT",
   "dependencies": {
@@ -17,8 +17,8 @@
   },
   "scripts": {
     "litesail": "ts-node ./src/index.ts",
-    "build": "tsc && cat ./bin/src/index.js > /tmp/temp-script && echo \"#!/usr/bin/env node\" > ./bin/src/index.js && cat /tmp/temp-script >> ./bin/src/index.js ; rm /tmp/temp-script",
-    "start": "node ./bin/src/index.js"
+    "build": "tsc && cat ./bin/index.js > /tmp/temp-script && echo \"#!/usr/bin/env node\" > ./bin/index.js && cat /tmp/temp-script >> ./bin/index.js ; rm /tmp/temp-script",
+    "start": "node ./bin/index.js"
   },
   "devDependencies": {
     "@swc/core": "^1.3.6",
