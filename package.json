@@ -1,6 +1,6 @@
 {
   "name": "litesail",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "bin/src/index.js",
   "repository": "https://github.com/klirix/litesail",
   "description": "Lightsail CLI, but user friendly",
@@ -13,12 +13,11 @@
     "@aws-sdk/client-lightsail": "^3.186.0",
     "@aws-sdk/client-s3": "^3.186.0",
     "chalk": "^4.1.2",
-    "commander": "^9.4.1",
-    "typescript": "^4.8.4"
+    "commander": "^9.4.1"
   },
   "scripts": {
     "litesail": "ts-node ./src/index.ts",
-    "build": "tsc",
+    "build": "tsc && cat ./bin/src/index.js > /tmp/temp-script && echo \"#!/usr/bin/env node\" > ./bin/src/index.js && cat /tmp/temp-script >> ./bin/src/index.js ; rm /tmp/temp-script",
     "start": "node ./bin/src/index.js"
   },
   "devDependencies": {
@@ -26,6 +25,7 @@
     "@swc/helpers": "^0.4.12",
     "@types/node": "^18.8.3",
     "regenerator-runtime": "^0.13.9",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
   }
 }
