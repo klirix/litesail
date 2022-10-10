@@ -2,6 +2,9 @@
   "name": "litesail",
   "version": "0.0.1",
   "main": "bin/src/index.js",
+  "repository": "https://github.com/klirix/litesail",
+  "description": "Lightsail CLI, but user friendly",
+  "author": "Askhat Saiapov",
   "bin": {
     "litesail": "./bin/src/index.js"
   },
