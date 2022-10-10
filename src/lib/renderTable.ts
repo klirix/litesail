@@ -9,11 +9,9 @@ export const renderTable = <T extends Record<string, string | undefined>>(
   const lengths = Object.keys(options).reduce(
     (acc, key) => ({
       ...acc,
-      [key]: list.reduce(
-        (acc, item) =>
-          Math.max(item[key]?.length || 0, acc, key.length + 1) + 1,
-        0
-      ),
+      [key]: list.reduce((acc, item) => {
+        return Math.max((item[key]?.length || 0) + 1, acc, key.length + 1);
+      }, 0),
     }),
     {} as Record<keyof T, number>
   );
