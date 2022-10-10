@@ -1,0 +1,41 @@
+Arguments: 
+  /home/askhat/.nvm/versions/node/v16.14.2/bin/node /usr/local/bin/yarn add @aws-sdk/lightsail
+
+PATH: 
+  /home/askhat/.bun/bin:/home/askhat/Android/emulator:/home/askhat/Android/tools:/home/askhat/Android/tools/bin:/home/askhat/Android/cmdline-tools/latest:/home/askhat/Android/cmdline-tools/latest/bin:/home/askhat/Android/platform-tools:/home/askhat/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/bin/remote-cli:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/askhat/.local/bin:/home/askhat/.bun/bin:/home/askhat/Android/emulator:/home/askhat/Android/tools:/home/askhat/Android/tools/bin:/home/askhat/Android/cmdline-tools/latest:/home/askhat/Android/cmdline-tools/latest/bin:/home/askhat/Android/platform-tools:/home/askhat/.nvm/versions/node/v16.14.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/Tailscale IPN:/mnt/c/Users/askhat/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/askhat/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/askhat/flutter/bin:/usr/local/go/bin:/home/askhat/Projects/litesail/flutter/bin:/usr/local/go/bin
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  16.14.2
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@aws-sdk%2flightsail: Not found
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66138:18)
+      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140883:22)
+      at Request.emit (node:events:526:28)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141855:10)
+      at Request.emit (node:events:526:28)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141777:12)
+      at Object.onceWrapper (node:events:645:28)
+      at IncomingMessage.emit (node:events:538:35)
+      at endReadableNT (node:internal/streams/readable:1345:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "litesail",
+    "version": "1.0.0",
+    "main": "bin/index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
