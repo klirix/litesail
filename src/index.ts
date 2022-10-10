@@ -50,13 +50,8 @@ app
 
 app
   .command("blueprints")
-  .option(
-    `-p --platform [platform]`,
-    "Platform to fetch bundles for (linux/windows)",
-    "linux"
-  )
   .description("Fetch available blueprints")
-  .action(async (options) => {
+  .action(async () => {
     const { blueprints = [] } = await lightsail.getBlueprints({});
     renderTable(
       blueprints.map((x) => ({
