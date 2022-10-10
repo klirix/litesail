@@ -1,5 +1,5 @@
 import { Command } from "commander";
-import { ipsCommands } from "./subcommands/ipsCommands";
+import { ipsCommands } from "./subcommands/ips";
 import instanceSubcommands from "./subcommands/instance";
 import instancesSubcommand from "./subcommands/instances";
 import { lightsail } from "./clients";
@@ -58,8 +58,15 @@ app
   .description("Fetch available blueprints")
   .action(async (options) => {
     const { blueprints = [] } = await lightsail.getBlueprints({});
-    const platform = options.platform === "linux" ? "LINUX_UNIX" : "WINDOWS";
-    console.log(blueprints); // TODO: Maybe list blueprints properly?
+    renderTable(
+      blueprints.map((x) => ({
+        Code: x.blueprintId,
+        Name: x.name,
+        Platform: x.platform == "LINUX_UNIX" ? "Linux" : "Windows",
+        Type: x.type,
+      })),
+      { Code: 1, Name: 1, Platform: 1, Type: 1 }
+    );
   });
 
 app.parse();
