@@ -33,7 +33,6 @@ instanceSubcommands
       }
 ${instance.blueprintName}`);
       if (instance.networking?.ports) {
-        console.log("Ports:");
         renderTable(
           instance.networking.ports.map((port) => ({
             Protocol: port.protocol?.toUpperCase(),
@@ -46,7 +45,8 @@ ${instance.blueprintName}`);
                 ? `Custom ${port.cidrs?.join(", ")}`
                 : port.accessFrom,
           })),
-          { Protocol: 1, "Port(s)": 1, "Whitelisted from": 1 }
+          { Protocol: 1, "Port(s)": 1, "Whitelisted from": 1 },
+          "Ports"
         );
       }
     } catch (error) {

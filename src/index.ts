@@ -1,5 +1,4 @@
 import { Command } from "commander";
-import manifest from "../package.json";
 import { ipsCommands } from "./subcommands/ipsCommands";
 import instanceSubcommands from "./subcommands/instance";
 import instancesSubcommand from "./subcommands/instances";
@@ -8,7 +7,6 @@ import { renderTable } from "./lib/renderTable";
 
 const app = new Command()
   .name("Litesail")
-  .version(manifest.version)
   .description("CLI for easier Lightsail management");
 
 app.addCommand(instancesSubcommand);
